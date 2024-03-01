@@ -1,0 +1,33 @@
+openapi: 3.0.0
+info:
+  version: "1.0.0"
+  title: tldr-api
+paths:
+  /posts:
+    get:
+      tags:
+        - Post
+      description: returns all posts
+      operationId: getPosts
+      responses:
+        "200":
+          description: a list of all posts
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    title:
+                      type: string
+    post:
+      tags:
+        - Post
+      description: create a new post
+      operationId: createPost
+      responses:
+        "200":
+          description: success
