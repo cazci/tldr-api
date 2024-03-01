@@ -2,7 +2,7 @@ import ballerina/http;
 import ballerina/io;
 import ballerina/os;
 
-final int PORT = check int:fromString(os:getEnv("DB_PORT"));
+final int PORT = check int:fromString(os:getEnv("PORT"));
 listener http:Listener api = new (PORT);
 
 service / on api {
