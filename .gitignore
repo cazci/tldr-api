@@ -1,4 +1,4 @@
 target
 generated
 Config.toml
-.env
+*.env
